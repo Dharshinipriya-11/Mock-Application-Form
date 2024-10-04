@@ -1,38 +1,357 @@
+App.css
+body {
+  font-family: Arial, sans-serif;
+}
+
+.heading{
+  /* text-align: center;
+  font-size: 30px;
+  font-weight: bold; */
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333; 
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  letter-spacing: 1px; 
+  line-height: 1.2;
+  
+}
+
 .App {
+  min-height: 100vh;
+  margin: -8px;
+  background-image: url('https://assets.techrepublic.com/uploads/2020/12/zoom-chinnapong.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+.main-container{
+  /* display: flex; */
+  flex-direction: row;
+  margin: 2%;
+  
+}
+.form-container {
+  
+  top: 20px;
+  left: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  gap: 15px 10px;
+  align-items: center;
+}
+
+form h2 {
+  grid-column: span 2;
+  margin-bottom: 15px;
+  font-size: 18px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-group {
+  display: contents;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.form-group label {
+  justify-self: center;
+  font-size: 14px; 
+}
+
+.form-group input {
+  padding: 6px 0; 
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-bottom: 2px solid #007bff; 
+}
+
+/* ProgressBar.css */
+.progress-bars{
+  width: 70%;
+  display: flex;
+  gap: 15%;
+  padding-top: 70px;
+  padding-left: 100px;
+  flex-direction: row;
+  margin: 20px 10px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.progress-bar-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.progress-label {
+  font-size: 25px;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.semi-circle {
+  width: 200px;
+  height: 100px;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  background-color: #e6e6e6;
+  position: relative;
+  overflow: hidden;
+}
+
+.fill-mask {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  clip: rect(0px, 150px, 75px, 0px);
+}
+
+.fill {
+  width: 200px;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 0;
+  transform-origin: bottom center;
+  transition: height 0.3s ease-in-out;
+}
+
+.inside-circle {
+  position: absolute;
+  top: 20px;
+  left: 43%;
+  line-height: 60px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* body {
+  font-family: Arial, sans-serif;
+} */
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+.abcd{
+  margin-top: -300px;
+}
+
+.progress_container{
+  margin-left: 37%;
+    margin-right: 7%;
+    display: flex;
+    gap: 10%;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-int {
+  display: flex;
+  margin: 90px 10px;
+  padding: 20px;
+  gap: 10%;
+  font-family: Arial, sans-serif;
+}
+
+.technology-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  color: blue;
+}
+
+.technology-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.technology-list-header,
+.technology-list-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.technology-list-header {
+  background: #eee;
+  font-weight: bold;
+}
+
+.technology-list-cell {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+.technology-list-cell:hover {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+.technology-list-row:nth-child(even) {
+  background: #fafafa;
+}
+
+.technology-list-row:nth-child(odd) {
+  background: #fff;
+}
+
+.technology-list-row:hover {
+  background: #e9e9e9;
+}
+
+
+.details-form {
+  /* margin-top: 20px; */
+  width: 100%;
+  background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  /* padding: 10px; */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+.point-circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.point-circle.filled {
+  background-color: #007bff;
+}
+
+.points-container {
+  display: flex;
+  align-items: center;
+}
+
+.points-scale {
+  display: flex;
+}
+
+.numerical-value {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  textarea {
+    height: 80px;
   }
+}
+
+.chart-container {
+  position: relative;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chart-content {
+  width: 100%;
+  height: auto;
+}
+
+.download{
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* .download {
+  position: absolute;
+  right: 10%;
+  top: 36%;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+} */
+
+.download:hover {
+  background-color: #0056b3; 
+  transform: scale(1.05);
+}
+
+.download:active {
+  background-color: #004085; 
 }
